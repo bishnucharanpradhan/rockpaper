@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Paper Scissor</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="dataContainer">
+            <div class="scorecard">
+                <div class="tittle">
+                    <h1>ROCK</br>PAPER</br>SCISSORS</br></h1>
+                </div>
+                <div class="twoscores">
+                    <div class="scores">
+                        <h3>COMPUTER</h3>
+                        <h3>SCORE</h3>
+                        <h1 id="cps">0</h1>
+                    </div>
+                    <div class="scores">
+                        <h3>YOUR</h3>
+                        <h3>SCORE</h3>
+                        <h1 id="ys">0</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="playingHands">
+                <div class="stone">
+                    <img src="stone.png" onclick="handleUserHand('stone')" />
+                </div>
+                <div class="scissor">
+                    <img src="scissor.png" onclick="handleUserHand('scissor')" />
+                </div>
+                <div class="paper">
+                    <img src="paper.png" onclick="handleUserHand('paper')" />
+                </div>
+                
+            </div>
+            <div class="decision">
+                <div class="userhand">
+                    <h3>YOU PICKED</h3>
+                    <div class="HandImg">
+                        <img id="userPickhand" src="paper.png">
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="output">
+                        <h1>YOU WIN</h1>
+                        <h3>AGAINST PC</h3>
+                    </div>
+                    <button onclick="handleReplay()" id="playAgain">
+                        PLAY AGAIN
+                    </button>
+                </div>
+                <div class="computer">
+                    <h3>PC PICKED</h3>
+                    <div class="computerHand">
+                        <img id="computerPickHand" src="scissor.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="winner">
+            <div class="trophy">
+                <img src="cup.png" />
+            </div>
+            <h1>
+                HURRAY!!
+            </h1>
+            <h3>YOU WON THE GAME</h3>
+            <button onclick="handleWinnerPlay()" id="playAgain">
+                PLAY AGAIN
+            </button>
+        </div>
+        <div class="rules">
+            <div class="rulesContainer">
+                <h1>Game Rules</h1>
+                <div class="rule">
+                    <div class="bullet"></div>
+                    <p>Rock beats scissors, scissors beat paper, and paper beats rock.</p>
+                </div>
+                <div class="rule">
+                    <div class="bullet"></div>
+                    <p>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock,
+                        paper, scissors.”</p>
+                </div>
+                <div class="rule">
+                    <div class="bullet"></div>
+                    <p>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</p>
+                </div>
+                <div class="rule">
+                    <div class="bullet"></div>
+                    <p>If both players lay down the same hand, each player lays down another hand</p>
+                </div>
+            </div>
+            <div onclick="handleRulesClose()" class="close">
+                X
+            </div>
+        </div>
+        <div class="btns">
+            <button onclick="handleRules()">
+                RULES
+            </button>
+            <button onclick="handleNext()" id="next">
+                NEXT
+            </button>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
+ 
